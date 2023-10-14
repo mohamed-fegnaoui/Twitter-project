@@ -1,0 +1,248 @@
+/* start global rules  */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* start variables  */
+:root {
+   --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --grey-color: #888;
+    --back-color:rgb(46, 45, 45);
+}
+
+/* end variables */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+*:focus{
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.page {
+    min-height: 100vh;
+}
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #eee;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* this is for small  */
+@media (min-width:767px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* this is for medium  */
+@media (min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* this is for large  */
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* end global rules  */
+/* start sidebar  */
+.sidebar{
+    width: 30%;
+    border-right: 1px solid rgb(108, 108, 108);
+    padding-right: 10px;
+}
+@media(max-width:767px){
+    .sidebar > h2{
+        font-size: 12px;
+    }
+    .sidebar{
+        width: 64px;
+    }
+}
+.sidebar ul li{
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 25px;
+    width: fit-content;
+    transition: 0.3s;
+}
+@media(max-width:767px){
+    .sidebar ul li span{
+        display: none;
+    }
+}
+.sidebar ul li:hover{
+    background-color: rgb(83, 80, 80);
+}
+.sidebar ul li i {
+    margin-right: 10px;
+}
+.sidebar .link a{
+    padding: 10px 60px;
+    border-radius: 25px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.sidebar .link a:hover{
+    background-color: var(--blue-alt-color);
+}
+@media(max-width:767px){
+    .sidebar .link a{
+        padding: 5px 6px;
+        font-size: 10px;
+        position: absolute;
+        left: -10%;
+    }
+}
+/* end sidebar  */
+/* start content  */
+.content{
+    width: 70%;
+    border-right: 1px solid rgb(108, 108, 108);
+}
+@media(max-width:1999px){
+    .content{
+        width: 100%;
+    }
+}
+.content .content-row{
+    padding:  10px 10px;
+    border-bottom: 1px solid rgb(108, 108, 108);
+    padding-bottom: 20px;
+}
+.content .content-row .home h3{
+    font-weight: 400;
+}
+.content .content-row img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    ;
+}
+.content .content-row .icons{
+    margin-left: 60px;
+}
+.content .content-row .icons i {
+    margin-right: 5px;
+}
+.content .content-row .link a{
+    background-color: var(--blue-color);
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.content .content-row .link a:hover{
+    background-color: var(--blue-alt-color);
+}
+.content .content-row .icons-two {
+    margin-left: 60px;
+    margin-right: 60px;
+}
+/* end content  */
+/* start search  */
+.search{
+    width: 25%;
+   margin-left: 20px;
+   margin-top: 20px;
+   padding: 10px;
+}
+@media(max-width:1999px){
+    .search{
+        margin-left: 0;
+        margin-right: 10px;
+        width: 100%;
+    }
+}
+.search input[type="search"]{
+    background-color: rgb(46, 45, 45);
+    border-radius: 25px;
+    padding: 10px;
+    border: none;
+}
+.search input[type="search"]:focus{
+    border: 2px solid var(--blue-color);
+}
+.search .boxes{
+    background-color: var(--back-color);
+    width: 250px;
+    border-radius: 10px;
+}
+@media(max-width:1999px){
+    .search .boxes,
+    .search input[type="search"]{
+        width: 100%;
+    }
+}
+.search .boxes .search-box.two{
+    margin-top: -20px;
+}
+.search .boxes .search-box .parag-one{
+    margin-top: -10px;
+}
+.search .boxes .search-box .parag-two{
+    margin-top: -5px;
+}
+@media(max-width:1199px){
+    .container-two{
+        flex-direction: column;
+    }
+}
+/* //  */
+.search .followers{
+    background-color:var(--back-color) ;
+    border-radius: 10px;
+}
+.search .followers .row-follow .link a {
+    padding: 10px 15px;
+    border-radius: 25px;
+    background-color: white;
+    color: var(--back-color);
+}
+/* end search  */
+@media(max-width:767px){
+    .link a{
+        font-size: 12px;
+        padding: 5px;
+    }
+}
+
